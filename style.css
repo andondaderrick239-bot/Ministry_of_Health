@@ -1,0 +1,35 @@
+/* ===== GLOBAL STYLES ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body {
+            font-family: Arial, sans-serif;
+            background-color: gray;
+            margin: 0px;
+            padding: 0px;
+                    }
+   /* ===== HEADER & NAVIGATION ===== */                 
+                    header{
+                        background-colour: lightblue;
+                        padding: 20px;
+                        position: sticky;
+                        top: 0;
+                    }
+                    .nav-links{
+                        list-style: none;
+                        display: flex;
+                        gap: 30px;
+                        justify-content: flex-end;
+                    }
+                    .nav-links a{
+                        color:bisque;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                    
+                    td{
+                        padding: 10px;
+                    }
