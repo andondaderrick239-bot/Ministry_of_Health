@@ -75,7 +75,7 @@
                         background: whitesmoke;
                         border-radius: 10px;
                         padding: 16px;
-                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+                        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.08);
                     }
 
                     .event-card2,
@@ -97,11 +97,73 @@
                     .event-card3 h3,
                     .event-card5 h5 {
                         margin-bottom: 10px;
-                        color: white;
+                        color: black;
                     }
 
                     .events p {
                         line-height: 1.5;
+                    }
+                    .ministry-info {
+                        background-color: lightgray;
+                        padding: 20px;
+                        margin: 20px auto;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        text-align: center;
+                        color: gray;
+                    }
+
+                    .doctor-info {
+                        padding: 20px 0;
+                        background: darkgray;
+                    }
+
+                    .doctor-slider {
+                        overflow: hidden;
+                        width: 100%;
+                    }
+
+                    .doctor-track {
+                        display: flex;
+                        width: max-content;
+                        animation: doctor-scroll 18s linear infinite;
+                    }
+
+                    .doctor-card {
+                        flex: 0 0 100%;
+                        width: 100vw;
+                        max-width: 100%;
+                        padding: 30px 40px;
+                        box-sizing: border-box;
+                        text-align: center;
+                    }
+
+                    .doctor-card blockquote {
+                        font-size: 18px;
+                        font-style: italic;
+                        color: #1f2d3d;
+                        margin-bottom: 15px;
+                        line-height: 1.6;
+                    }
+
+                    .doctor-name {
+                        font-weight: bold;
+                        color: black;
+                        margin-bottom: 6px;
+                    }
+
+                    .doctor-title {
+                        font-size: 14px;
+                        color: white;
+                    }
+
+                    @keyframes doctor-scroll {
+                        from {
+                            transform: translateX(0);
+                        }
+                        to {
+                            transform: translateX(-50%);
+                        }
                     }
 
                     td{
