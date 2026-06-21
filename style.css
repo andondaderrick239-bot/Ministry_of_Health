@@ -6,7 +6,7 @@
 }
  body {
             font-family: Arial, sans-serif;
-            background-color: lightskyblue;
+            background-color: offwhite;
             margin: 0px;
             padding: 0px;
                     }
@@ -31,26 +31,7 @@
                         font-weight: bold;
                     }
 
-                    .image-slider {
-                        overflow: hidden;
-                        background: #eef7ff;
-                        padding: 16px 0;
-                    }
-
-                    .slider-track {
-                        display: flex;
-                        width: max-content;
-                        animation: slide-left 18s linear infinite;
-                    }
-
-                    .slider-track img {
-                        width: 360px;
-                        height: 240px;
-                        object-fit: cover;
-                        flex: 0 0 auto;
-                        margin-right: 16px;
-                        border-radius: 10px;
-                    }
+                    
 
                     @keyframes slide-left {
                         from {
@@ -80,38 +61,46 @@
 
                     .events {
                         display: grid;
-                        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                        grid-template-columns: repeat(2, 1fr);
                         gap: 16px;
                         padding: 20px;
+                        max-width: 1100px;
+                        margin: 0 auto;
                     }
 
-                    .event-card 2, 
-                    .event-card 4 {
-                        background: lightgray;
+                    .event-card2,
+                    .event-card3,
+                    .event-card4,
+                    .event-card5 {
+                        background: whitesmoke;
                         border-radius: 10px;
                         padding: 16px;
                         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
                     }
-                    .event-card 3,
-                    .event-card 5  {
+
+                    .event-card2,
+                    .event-card4 {
                         background: white;
-                        border-radius: 10px;
-                        padding: 16px;
-                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
                     }
 
-                    .event-card h3,
-                    .event-card h5{
+                    .event-card3,
+                    .event-card5 {
+                        background: deepgray;
+                    }
+
+                    .event-card2 h2,
+                    .event-card4 h4 {
                         margin-bottom: 10px;
                         color: black;
                     }
-                    .event-card h2,
-                    .event-card h4,{
+
+                    .event-card3 h3,
+                    .event-card5 h5 {
                         margin-bottom: 10px;
                         color: white;
                     }
 
-                    .event-card p {
+                    .events p {
                         line-height: 1.5;
                     }
 
