@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ministry of Health Uganda - Data & E-Services</title>
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f5f5;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('uganda_flag.jpg');
+background-size:cover;
+background-position:center;
+color:white;
+padding:50px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:2.5rem;
+margin-bottom:10px;
+}
+
+nav{
+background:#990000;
+padding:15px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:10px 15px;
+border-radius:5px;
+transition:0.3s;
+}
+
+nav a:hover,
+nav a.active{
+background:#cc0000;
+}
+
+.page{
+display:none;
+padding:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.page.active{
+display:block;
+}
+
+.card{
+background:white;
+padding:25px;
+margin-bottom:20px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+h2{
+color:#cc0000;
+margin-bottom:15px;
+border-bottom:3px solid #cc0000;
+padding-bottom:8px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+background:white;
+}
+
+table th,
+table td{
+border:1px solid #ddd;
+padding:12px;
+text-align:left;
+}
+
+table th{
+background:#cc0000;
+color:white;
+}
+
+tr:nth-child(even){
+background:#f9f9f9;
+}
+
+button{
+background:#cc0000;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+button:hover{
+background:#990000;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+outline:none;
+border-color:#cc0000;
+box-shadow:0 0 5px rgba(204,0,0,0.4);
+}
+
+ul{
+padding-left:20px;
+}
+
+footer{
+background:#990000;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+footer p{
+margin:5px 0;
+}
+
+@media(max-width:768px){
+
+header h1{
+font-size:1.8rem;
+}
+
+nav ul{
+flex-direction:column;
+align-items:center;
+}
+
+table{
+display:block;
+overflow-x:auto;
+}
+
+.page{
+padding:15px;
+}
+
+.card{
+padding:15px;
+}
+}
+
+</style></head>
+<body>
+
+<header>
+<h1>MINISTRY OF HEALTH UGANDA</h1>
+<h3>Data & E-Services Portal</h3>
+</header>
+
+<nav>
+<ul>
+<li><a href="#" onclick="showPage('home')">Home</a></li>
+	<li id="menu-item-626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-626"> <a href="https://health.go.ug/iec-materials/">IEC Materials</a> </li>
+	<li id="menu-item-1647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1647"> <a href="https://health.go.ug/manuals-guides/">Manuals &amp; Guides</a> </li>
+	<li id="menu-item-569" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-569"> <a href="https://nhfr.health.go.ug/">Facility Registry</a> </li>
+	<li id="menu-item-570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-570"> <a href="#">Submit an Alert</a> </li>
+	<li id="menu-item-571" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-571"> <a href="https://nho.health.go.ug/">Data</a> </li>
+	<li id="menu-item-2123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2123"> <a href="https://elearning.health.go.ug/">eLearning Portal</a> </li>
+	<li id="menu-item-2122" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2122"> <a href="https://partners.health.go.ug/">Partners Portal</a> </li>
+
+</ul>
+</nav>
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+<div class="card">
+<img decoding="uganda_flag.jpg" />
+<h2>Welcome to Data & E-Services</h2>
+
+<p>
+The Ministry of Health Uganda provides digital services, health information resources,
+facility information systems, learning platforms and access to national health data.
+</p>
+
+<br>
+
+<p>
+Uganda has made progress in reducing communicable diseases, improving maternal and child
+health services, increasing immunization coverage and strengthening disease surveillance.
+The health sector continues to focus on malaria control, HIV/AIDS prevention, tuberculosis
+management, emergency preparedness, nutrition and universal health coverage.
+</p>
+
+<br>
+
+<p>
+This portal provides access to reports, guidelines, educational resources, health facility
+information, electronic learning and partner coordination services.
+</p>
+</div>
+</section>
+
+<!-- LIBRARY -->
+<section id="library" class="page">
+<div class="card">
+<h2>Health Library</h2>
+
+<p>
+The digital library contains policies, research publications, strategic plans,
+health bulletins, disease surveillance reports and academic resources.
+</p>
+
+<table>
+<tr>
+<th>Document</th>
+<th>Category</th>
+<th>Year</th>
+</tr>
+<tr>
+<td>National Health Policy</td>
+<td>Policy</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>Health Sector Development Plan</td>
+<td>Strategic Plan</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>Malaria Elimination Strategy</td>
+<td>Strategy</td>
+<td>2024</td>
+</tr>
+</table>
+</div>
+</section> 
+
+<!-- REPORTS -->
+<section id="reports" class="page">
+<div class="card">
+<h2>Health Reports</h2>
+
+<p>
+Access annual health sector reports, epidemiological reports and monitoring
+and evaluation publications.
+</p>
+
+<ul>
+<li>Annual Health Sector Performance Report</li>
+<li>Maternal Mortality Review Report</li>
+<li>Disease Surveillance Bulletin</li>
+<li>National HIV Program Report</li>
+<li>Malaria Indicator Report</li>
+</ul>
+</div>
+</section>
+
+<!-- IEC -->
+<section id="iec" class="page">
+<div class="card">
+<h2>IEC Materials</h2>
+
+<p>
+Information, Education and Communication materials used to promote healthy
+behaviour and disease prevention.
+</p>
+
+<ul>
+<li>Malaria Prevention Posters</li>
+<li>Immunization Campaign Flyers</li>
+<li>Maternal Health Information Sheets</li>
+<li>Nutrition Awareness Materials</li>
+<li>HIV Prevention Campaign Resources</li>
+</ul>
+</div>
+</section>
+
+<!-- MANUALS -->
+<section id="manuals" class="page">
+<div class="card">
+<h2>Manuals & Guides</h2>
+
+<p>
+Official technical guidelines and manuals for healthcare workers and institutions.
+</p>
+
+<ul>
+<li>Clinical Treatment Guidelines</li>
+<li>Infection Prevention Manual</li>
+<li>Laboratory Services Manual</li>
+<li>Emergency Response Guide</li>
+<li>Maternal and Child Health Guide</li>
+</ul>
+</div>
+</section>
+
+<!-- FACILITY REGISTRY -->
+<section id="registry" class="page">
+<div class="card">
+<h2>National Health Facility Registry</h2>
+
+<p>
+The registry provides information on public and private health facilities
+throughout Uganda.
+</p>
+
+<table>
+<tr>
+<th>Facility</th>
+<th>District</th>
+<th>Level</th>
+</tr>
+<tr>
+<td>Mulago National Referral Hospital</td>
+<td>Kampala</td>
+<td>National Referral</td>
+</tr>
+<tr>
+<td>Mbarara Regional Referral Hospital</td>
+<td>Mbarara</td>
+<td>Regional Referral</td>
+</tr>
+<tr>
+<td>Jinja Regional Referral Hospital</td>
+<td>Jinja</td>
+<td>Regional Referral</td>
+</tr>
+</table>
+</div>
+</section>
+
+<!-- ALERT -->
+<section id="alert" class="page">
+<div class="card">
+<h2>Submit a Public Health Alert</h2>
+
+<form>
+<label>Full Name</label>
+<input type="text">
+
+<label>District</label>
+<input type="text">
+
+<label>Alert Category</label>
+<select>
+<option>Disease Outbreak</option>
+<option>Medicine Shortage</option>
+<option>Environmental Hazard</option>tc
+<option>Emergency Incident</option>
+</select>
+
+<label>Description</label>
+<textarea rows="6"></textarea>
+
+<button type="submit">Submit Alert</button>
+</form>
+</div>
+</section>
+
+<!-- DATA -->
+<section id="data" class="page">
+<div class="card">
+<h2>Health Data Dashboard</h2>
+
+<p>
+National health statistics support evidence-based planning and decision-making.
+</p>
+
+<table>
+<tr>
+<th>Indicator</th>
+<th>Status</th>
+</tr>
+<tr>
+<td>Life Expectancy</td>
+<td>Improving</td>
+</tr>
+<tr>
+<td>Immunization Coverage</td>
+<td>High Priority</td>
+</tr>
+<tr>
+<td>Malaria Control</td>
+<td>Ongoing</td>
+</tr>
+<tr>
+<td>Maternal Health Services</td>
+<td>Strengthening</td>
+</tr>
+</table>
+</div>
+</section>
+
+<!-- ELEARNING -->
+<section id="elearning" class="page">
+<div class="card">
+<h2>eLearning Portal</h2>
+
+<p>
+Online training programs for healthcare workers and administrators.
+</p>
+
+<ul>
+<li>Malaria Case Management</li>
+<li>Integrated Disease Surveillance</li>
+<li>Emergency Preparedness</li>
+<li>Maternal and Child Health</li>
+<li>Health Information Systems</li>
+</ul>
+</div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners" class="page">
+<div class="card">
+<h2>Partners Portal</h2>
+
+<p>
+A collaboration platform for government agencies, NGOs, development partners,
+research institutions and implementing organizations.
+</p>
+
+<ul>
+<li>Project Coordination</li>
+<li>Partner Reporting</li>
+<li>Resource Sharing</li>
+<li>Program Monitoring</li>
+<li>Joint Planning Activities</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<p>Ministry of Health Uganda | Data & E-Services Portal</p>
+<p>&copy; 2026 Data & E- service.
+All Rights Reserved.</p>
+<p>Contact Directory: MoH Contact Us</p>
+<p>Location: Plot 6 Lourdel Road, Wandegeya, Kampala, Uganda</p>
+<p> General Email: info@health.go.ug</p>
+<p>Official Website: Ministry of Health - Uganda</p>
+<p>Facebook: Ministry of Health- Uganda Facebook Page
+<p>Bids & Tenders: MoH Procurement & Bids</p>
+<p>All Downloads(Press releases, SOPs): MoH Downloads</p>
+</footer>
+
+<script>
+function showPage(pageId){
+
+const pages=document.querySelectorAll('.page');
+
+pages.forEach(page=>{
+page.classList.remove('active');
+});
+
+document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
+```
