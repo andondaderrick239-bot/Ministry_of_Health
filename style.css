@@ -17,12 +17,43 @@
                         position: sticky;
                         top: 0;
                         z-index: 10;
+                        min-height: 110px;
+                    }
+
+                    .header-banner {
+                        width: 100%;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 18px 20px 25px;
+                        background: #f5f5f5;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .header-banner img {
+                        width: 100%;
+                        max-width: 1040px;
+                        height: auto;
+                        display: block;
+                        border-radius: 14px;
+                        box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+                    }
+
+                    .uganda-emblem {
+                        position: absolute;
+                        top: 10px;
+                        right: 20px;
+                        width: 70px;
+                        height: 70px;
+                        object-fit: contain;
                     }
                     .nav-links{
                         list-style: none;
                         display: flex;
                         gap: 30px;
                         justify-content: flex-end;
+                        padding-right: 95px;
                     }
                     .nav-links a{
                         color:bisque;
@@ -57,6 +88,40 @@
                         font-size: 16px;
                         margin-bottom: 20px;
                         text-align: center;
+                    }
+
+                    .contact {
+                        padding: 30px 20px;
+                        background-color: #f7f7f7;
+                    }
+
+                    .contact-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 24px;
+                        max-width: 1100px;
+                        margin: 0 auto;
+                        flex-wrap: wrap;
+                    }
+
+                    .contact-text {
+                        flex: 1 1 320px;
+                        min-width: 280px;
+                    }
+
+                    .contact-image {
+                        flex: 0 0 320px;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .contact-image img {
+                        width: 100%;
+                        max-width: 320px;
+                        height: auto;
+                        border-radius: 12px;
+                        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
                     }
 
                     .events {
@@ -202,6 +267,23 @@
                         color: #b30000;
                         text-decoration: underline;
                     }
+
+                    .footer-image {
+                        display: flex;
+                        justify-content: center;
+                        margin: 0 auto 20px;
+                        max-width: 160px;
+                    }
+
+                    .footer-image img {
+                        width: 100%;
+                        max-width: 120px;
+                        height: auto;
+                        display: block;
+                        border-radius: 10px;
+                        border: 2px solid rgba(255,255,255,0.85);
+                    }
+
                     .copyright{
                      background-color: black; 
                      color: white;
@@ -325,3 +407,29 @@
                         padding-bottom: 10px;
 
                     }
+
+/* Image scroller styles */
+.image-scroller{
+    width: 100%;
+    max-width: 1100px;
+    margin: 12px auto;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #f3f3f3;
+}
+.image-track{
+    display: flex;
+    width: 100%;
+    transition: transform 0.8s ease-in-out;
+}
+.image-track img{
+    flex: 0 0 100%;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 600px){
+    .image-track img{ height: 160px; }
+}
