@@ -1,0 +1,435 @@
+/* ===== GLOBAL STYLES ===== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body {
+            font-family: Arial, sans-serif;
+            background-color: offwhite;
+            margin: 0px;
+            padding: 0px;
+                    }
+   /* ===== HEADER & NAVIGATION ===== */                 
+                    header{
+                        background-color: lightslategrey;
+                        padding: 20px;
+                        position: sticky;
+                        top: 0;
+                        z-index: 10;
+                        min-height: 110px;
+                    }
+
+                    .header-banner {
+                        width: 100%;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 18px 20px 25px;
+                        background: #f5f5f5;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .header-banner img {
+                        width: 100%;
+                        max-width: 1040px;
+                        height: auto;
+                        display: block;
+                        border-radius: 14px;
+                        box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+                    }
+
+                    .uganda-emblem {
+                        position: absolute;
+                        top: 10px;
+                        right: 20px;
+                        width: 70px;
+                        height: 70px;
+                        object-fit: contain;
+                    }
+                    .nav-links{
+                        list-style: none;
+                        display: flex;
+                        gap: 30px;
+                        justify-content: flex-end;
+                        padding-right: 95px;
+                    }
+                    .nav-links a{
+                        color:bisque;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+
+                    
+
+                    @keyframes slide-left {
+                        from {
+                            transform: translateX(0);
+                        }
+                        to {
+                            transform: translateX(-50%);
+                        }
+                    }
+                    p.contact-info{
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                        text-align: center;
+                    }
+
+                    p.contact-number{
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+                    p.contact-information{
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+
+                    .contact {
+                        padding: 30px 20px;
+                        background-color: #f7f7f7;
+                    }
+
+                    .contact-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 24px;
+                        max-width: 1100px;
+                        margin: 0 auto;
+                        flex-wrap: wrap;
+                    }
+
+                    .contact-text {
+                        flex: 1 1 320px;
+                        min-width: 280px;
+                    }
+
+                    .contact-image {
+                        flex: 0 0 320px;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .contact-image img {
+                        width: 100%;
+                        max-width: 320px;
+                        height: auto;
+                        border-radius: 12px;
+                        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .events {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 16px;
+                        padding: 20px;
+                        max-width: 1100px;
+                        margin: 0 auto;
+                    }
+
+                    .event-card2,
+                    .event-card3,
+                    .event-card4,
+                    .event-card5 {
+                        background: whitesmoke;
+                        border-radius: 10px;
+                        padding: 16px;
+                        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.08);
+                    }
+
+                    .event-card2,
+                    .event-card4 {
+                        background: white;
+                    }
+
+                    .event-card3,
+                    .event-card5 {
+                        background: deepgray;
+                    }
+
+                    .event-card2 h2,
+                    .event-card4 h4 {
+                        margin-bottom: 10px;
+                        color: black;
+                    }
+
+                    .event-card3 h3,
+                    .event-card5 h5 {
+                        margin-bottom: 10px;
+                        color: black;
+                    }
+
+                    .events p {
+                        line-height: 1.5;
+                    }
+                    .ministry-info {
+                        background-color: lightgray;
+                        padding: 20px;
+                        margin: 20px auto;
+                        font-size: 16px;
+                        line-height: 1.5;
+                        text-align: center;
+                        color: gray;
+                    }
+
+                    .doctor-info {
+                        padding: 20px 0;
+                        background: darkgray;
+                    }
+
+                    .doctor-slider {
+                        overflow: hidden;
+                        width: 100%;
+                    }
+
+                    .doctor-track {
+                        display: flex;
+                        width: max-content;
+                        animation: doctor-scroll 18s linear infinite;
+                    }
+
+                    .doctor-card {
+                        flex: 0 0 100%;
+                        width: 100vw;
+                        max-width: 100%;
+                        padding: 30px 40px;
+                        box-sizing: border-box;
+                        text-align: center;
+                    }
+
+                    .doctor-card blockquote {
+                        font-size: 18px;
+                        font-style: italic;
+                        color: #1f2d3d;
+                        margin-bottom: 15px;
+                        line-height: 1.6;
+                    }
+
+                    .doctor-name {
+                        font-weight: bold;
+                        color: black;
+                        margin-bottom: 6px;
+                    }
+
+                    .doctor-title {
+                        font-size: 14px;
+                        color: white;
+                    }
+
+                    @keyframes doctor-scroll {
+                        from {
+                            transform: translateX(0);
+                        }
+                        to {
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    .other-links-section {
+                        padding: 20px;
+                        text-align: left;
+                    }
+
+                    .other-links-section h4 {
+                        margin-bottom: 12px;
+                        color: #ffffff;
+                        font-size: 18px;
+                    }
+
+                    .other-links-list {
+                        list-style: none;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        justify-content: flex-start;
+                    }
+
+                    .other-link-btn {
+                        display: inline-block;
+                        background: rgba(255, 255, 255, 0.08);
+                        color: #ffffff;
+                        text-decoration: none;
+                        padding: 8px 12px;
+                        border-radius: 6px;
+                        font-size: 14px;
+                        line-height: 1.4;
+                        border: 1px solid rgba(255, 255, 255, 0.18);
+                    }
+
+                    .other-link-btn:hover {
+                        background: #ffffff;
+                        color: #b30000;
+                        text-decoration: underline;
+                    }
+
+                    .footer-image {
+                        display: flex;
+                        justify-content: center;
+                        margin: 0 auto 20px;
+                        max-width: 160px;
+                    }
+
+                    .footer-image img {
+                        width: 100%;
+                        max-width: 120px;
+                        height: auto;
+                        display: block;
+                        border-radius: 10px;
+                        border: 2px solid rgba(255,255,255,0.85);
+                    }
+
+                    .copyright{
+                     background-color: black; 
+                     color: white;
+                      
+                    }
+                     .news-container {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .news-item {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            gap: 15px;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .date-box {
+            background-color: #0275d8;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            min-width: 60px;
+        }
+        .date-day {
+            font-size: 1.5em;
+            font-weight: bold;
+            display: block;
+        }
+        .date-month {
+            font-size: 0.9em;
+        }
+        .news-content {
+            flex: 1;
+        }
+        .news-meta {
+            font-size: 0.85em;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .news-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #292b2c;
+            margin: 0 0 5px 0;
+            text-decoration: none;
+        }
+        .news-title:hover {
+            color: #0275d8;
+        }
+        .news-excerpt {
+            font-size: 0.95em;
+            color: #555;
+            margin: 0;
+        }
+        .download-section {
+            padding: 20px;
+        }
+
+        .wpdm-download-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: #ffffff;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .wpdm-download-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .wpdm-download-link {
+            font-weight: 600;
+            text-decoration: none;
+            color: #1f2937;
+            font-size: 1rem;
+        }
+
+        .wpdm-download-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .wpdm-download-button {
+            background-color: #006633;
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .wpdm-download-button:hover {
+            background-color: #00522a;
+        }
+                    td{
+                        padding: 10px;
+                    }
+                    footer{
+                        background-color: red;
+                        color: white;
+                        text-align: center;
+                        padding-bottom: 10px;
+
+                    }
+
+/* Image scroller styles */
+.image-scroller{
+    width: 100%;
+    max-width: 1100px;
+    margin: 12px auto;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #f3f3f3;
+}
+.image-track{
+    display: flex;
+    width: 100%;
+    transition: transform 0.8s ease-in-out;
+}
+.image-track img{
+    flex: 0 0 100%;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 600px){
+    .image-track img{ height: 160px; }
+}
