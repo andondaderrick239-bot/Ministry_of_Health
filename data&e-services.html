@@ -68,28 +68,43 @@ nav a.active{
 background:#cc0000;
 }
 
-.page{
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
 display:none;
-padding:30px;
-max-width:1200px;
-margin:auto;
-}
-
-.page.active{
-display:block;
-}
-
-.card{
+position:absolute;
+top:100%;
+left:0;
 background:white;
-padding:25px;
-margin-bottom:20px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
-transition:0.3s;
+min-width:250px;
+list-style:none;
+padding:0;
+margin:0;
+border-radius:5px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+z-index:1000;
 }
 
-.card:hover{
-transform:translateY(-5px);
+.dropdown-menu li{
+width:100%;
+}
+
+.dropdown-menu a{
+display:block;
+padding:12px;
+color:black;
+text-decoration:none;
+}
+
+.dropdown-menu a:hover{
+background:#cc0000;
+color:white;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
 }
 
 h2{
@@ -208,18 +223,28 @@ padding:15px;
 
 <nav>
 <ul>
+
 <li><a href="#" onclick="showPage('home')">Home</a></li>
-	<li id="menu-item-626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-626"> <a href="https://health.go.ug/iec-materials/">IEC Materials</a> </li>
-	<li id="menu-item-1647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1647"> <a href="https://health.go.ug/manuals-guides/">Manuals &amp; Guides</a> </li>
-	<li id="menu-item-569" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-569"> <a href="https://nhfr.health.go.ug/">Facility Registry</a> </li>
-	<li id="menu-item-570" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-570"> <a href="#">Submit an Alert</a> </li>
-	<li id="menu-item-571" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-571"> <a href="https://nho.health.go.ug/">Data</a> </li>
-	<li id="menu-item-2123" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2123"> <a href="https://elearning.health.go.ug/">eLearning Portal</a> </li>
-	<li id="menu-item-2122" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2122"> <a href="https://partners.health.go.ug/">Partners Portal</a> </li>
+
+<li class="dropdown">
+<a href="#">Data & E-Services ▼</a>
+
+<ul class="dropdown-menu">
+<li><a href="#" onclick="showPage('library')">Library</a></li>
+<li><a href="#" onclick="showPage('reports')">Reports</a></li>
+<li><a href="#" onclick="showPage('iec')">IEC Materials</a></li>
+<li><a href="#" onclick="showPage('manuals')">Manuals & Guides</a></li>
+<li><a href="#" onclick="showPage('registry')">Facility Registry</a></li>
+<li><a href="#" onclick="showPage('alert')">Submit Alert</a></li>
+<li><a href="#" onclick="showPage('data')">Health Data Dashboard</a></li>
+<li><a href="#" onclick="showPage('elearning')">eLearning Portal</a></li>
+<li><a href="#" onclick="showPage('partners')">Partners Portal</a></li>
+</ul>
+
+</li>
 
 </ul>
-</nav>
-<!-- HOME PAGE -->
+</nav><!-- HOME PAGE -->
 <section id="home" class="page active">
 <div class="card">
 <img decoding="uganda_flag.jpg" />
@@ -249,7 +274,7 @@ information, electronic learning and partner coordination services.
 </section>
 
 <!-- LIBRARY -->
-<section id="library" class="page">
+<section id="library" class="dropdown">
 <div class="card">
 <h2>Health Library</h2>
 
@@ -284,7 +309,7 @@ health bulletins, disease surveillance reports and academic resources.
 </section> 
 
 <!-- REPORTS -->
-<section id="reports" class="page">
+<section id="reports" class="dropdown">
 <div class="card">
 <h2>Health Reports</h2>
 
@@ -324,7 +349,7 @@ behaviour and disease prevention.
 </section>
 
 <!-- MANUALS -->
-<section id="manuals" class="page">
+<section id="manuals" class="dropdown">
 <div class="card">
 <h2>Manuals & Guides</h2>
 
@@ -343,7 +368,7 @@ Official technical guidelines and manuals for healthcare workers and institution
 </section>
 
 <!-- FACILITY REGISTRY -->
-<section id="registry" class="page">
+<section id="registry" class="dropdown">
 <div class="card">
 <h2>National Health Facility Registry</h2>
 
@@ -378,7 +403,7 @@ throughout Uganda.
 </section>
 
 <!-- ALERT -->
-<section id="alert" class="page">
+<section id="alert" class="dropdown">
 <div class="card">
 <h2>Submit a Public Health Alert</h2>
 
@@ -406,7 +431,7 @@ throughout Uganda.
 </section>
 
 <!-- DATA -->
-<section id="data" class="page">
+<section id="data" class="dropdown">
 <div class="card">
 <h2>Health Data Dashboard</h2>
 
@@ -440,7 +465,7 @@ National health statistics support evidence-based planning and decision-making.
 </section>
 
 <!-- ELEARNING -->
-<section id="elearning" class="page">
+<section id="elearning" class="dropdown">
 <div class="card">
 <h2>eLearning Portal</h2>
 
@@ -459,7 +484,7 @@ Online training programs for healthcare workers and administrators.
 </section>
 
 <!-- PARTNERS -->
-<section id="partners" class="page">
+<section id="partners" class="dropdown">
 <div class="card">
 <h2>Partners Portal</h2>
 
