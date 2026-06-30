@@ -13,19 +13,23 @@
         
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">News & Events</a></li>
-                <li><a href="#">Data & E-Services</a></li>
-                <li><a href="#">Opportunities</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li class="search-button"><button type="button">Search</button></li>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="ministry of health.html">About</a></li>
+                <li>News & Events</li>
+                <li><a href="data&e-services.html">Data & E-Services</a></li>
+                <li><a href="Opportunity.html">Opportunities</a></li>
+                <li><a href="Contact Us.html">Contact Us</a></li>
+                    <li class="search-button"><button type="button">Search</button></li>
                                             </ul>
         </nav>
         <h1>Ministry of Health</h1>
     </header>
     <div class="header-banner">
-        <img src="image_12.jpg" alt="Ministry of Health banner" />
+        <div class="slider" aria-hidden="false">
+            <img src="image_11.avif" alt="Ministry of Health banner 1" class="active" />
+            <img src="image_12.jpg" alt="Ministry of Health banner 2" />
+            <img src="image_9.jpg" alt="Ministry of Health banner 3" />
+        </div>
     </div>
     <section class="contact">
         <div class="contact-container">
@@ -75,6 +79,9 @@
         </div>
     </section>
     <section class="ministry-information">
+        <div class="ministry-image">
+            <img src="image_7.jpg" alt="Ministry of Health" />
+        </div>
         <h8> About the Ministry of Health </h8>
         <p class="ministry-info">
             The Ministry of Health is a government body set up with the mandate of stewardship and leadership of the health sector. The Ministry of Health is responsible for policy review and development, supervision of health sector activities, formulation and dialogue with health development partners, strategic planning, setting standards and quality assurance, resource mobilization, advising other Ministries, departments and agencies on health-related matters, and ensuring quality, health equity, and fairness in contribution towards the cost of health care.
@@ -280,5 +287,34 @@
                         <p class="copyright">&copy; 2026 Ministry of Health. All rights reserved.</p>
 
     </footer>
+    <script>
+    (function(){
+        const imgs = document.querySelectorAll('.header-banner .slider img');
+        if(!imgs || imgs.length < 2) return;
+        let current = 0;
+        const total = imgs.length;
+        // initialize
+        imgs.forEach((img, i) => {
+            img.style.opacity = i === 0 ? '1' : '0';
+            img.style.transform = i === 0 ? 'translateX(0)' : 'translateX(8%)';
+        });
+
+        function show(next){
+            const prevImg = imgs[current];
+            const nextImg = imgs[next];
+            if(prevImg === nextImg) return;
+            // trigger transitions
+            prevImg.style.opacity = '0';
+            prevImg.style.transform = 'translateX(-8%)';
+            nextImg.style.opacity = '1';
+            nextImg.style.transform = 'translateX(0)';
+            current = next;
+        }
+
+        setInterval(()=>{
+            show((current + 1) % total);
+        }, 3800);
+    })();
+    </script>
 </body>
 </html>
