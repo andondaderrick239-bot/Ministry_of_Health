@@ -1,350 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Library</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f8fb;
-            color: #333;
-        }
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Health Library</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f7fa
+}
 
         header {
             background:
 linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
 url('library.jpg');
 background-size:cover;
-background-position:center;
-
-       color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            width: 85%;
-            margin: 30px auto;
-        }
-
-        .intro {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-        }
-
-        .section {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            color: red;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
-        .resources {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: redS;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 5px solid red;
-        }
-
-        .card h3 {
-            margin-top: 0;
-        }
-
-        .btn {
-            display: inline-block;
-            background: red;
-            color: white;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        .btn:hover {
-            background: #005f8d;
-        }
-
-       .footer{
-    background:#333;
-    color:white;
-    padding:50px;
+background-position:center
 }
-
-.footer-container{
-    display:flex;
-    justify-content:space-between;
+h1{
+text-align:center;
+color:white;
 }
-
-.footer-col{
-    width:23%;
+h2{
+text-align:center;
+color:black;
 }
-
-.footer-logo{
-    width:80px;
-    margin-bottom:15px;
+h3{
+text-align:right;
+color:black;
 }
-
-.footer h2,
-.footer h3{
-    margin-bottom:20px;
+nav{
+display:flex;
+gap:20px;
+justify-content:center;
+background:#990000;
+padding:12px;
+align:right;
 }
-
-.footer p{
-    margin:10px 0;
-    color:#ddd;
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:bold
 }
-
-.footer a{
-    display:block;
-    color:#ddd;
-    text-decoration:none;
-    margin:12px 0;
-}
-
-.footer a:hover{
-    color:white;
-}
-
-.social-icons{
-    margin-top:20px;
-}
-
-.social-icons a{
-    font-size:35px;
-    margin-right:15px;
-    color:white;
-}
-
-.footer input{
-    width:100%;
-    height:40px;
-    margin:10px 0;
-}
-
-.footer button{
-    background:#0b63b6;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    cursor:pointer;
-}
-
-.footer button:hover{
-    background:#084b88;
-}
-
-.copyright{
-    background:black;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
+.hero{
+text-align:center;
+padding:40px 20px
 }
 input{
-    width:px;
-    height:40px;
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:5px;
-    font-size:16px;
+width:min(700px,90%);
+padding:12px;border-radius:25px;
+border:1px solid #ccc
 }
-    </style>
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px
+}
+.card{
+background:#fff;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,.15);
+overflow:hidden
+}
+.card img{
+width:100%;
+height:180px;
+object-fit:cover
+}
+.card h3{
+padding:10px;
+color:#990000
+}
+.partners{
+text-align:center;
+padding:30px
+}
+.partners img{
+height:60px;
+margin:15px
+}
+.footer {
+            background: #990000;
+            color: white;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 30px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer .copy {
+            margin-top: 12px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+</style>
 </head>
 <body>
-
 <header>
-    <h1>Health Library</h1>
-<div class="input-box">
-<input type="text" placeholder="Search publications, articles,keyboards, etc">
-</div>
-    <p>Your Trusted Source for Health Information and Learning Resources</p>
+<nav>
+<a href="#">Home</a>
+<a href="#">About US</a>
+<a href="#">Ebola</a>
+<a href="#">Categories</a>
+<a href="#">Publications</a>
+<a href="#">FAQs</a>
+<a href="#">LOGIN</a>
+</nav>
+
+<img src="MOH coat.png" alt="MOH coat" width="100" align="left">
+<h1>Health Library</h1>
+<h1><p>Your Trusted Source for Health Information and Learning Resources</p></h1>
+<section class="hero">
+<input placeholder="Search publications, articles, keywords, etc.">
+
 </header>
+</section>
 
-<div class="container">
-
-    <div class="intro">
-        <h2>Welcome to the Health Library</h2>
-        <p>
-            The Health Library provides reliable, up-to-date, and evidence-based
-            health information for patients, healthcare professionals, researchers,
-            and the general public. Explore educational materials, health guides,
-            disease information, wellness resources, and medical publications to
-            support informed health decisions.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>Library Services</h2>
-        <ul>
-            <li>Access to digital health publications and journals</li>
-            <li>Health education and awareness materials</li>
-            <li>Medical research resources and references</li>
-            <li>Disease prevention and management guides</li>
-            <li>Health policy and public health reports</li>
-            <li>Online learning and training resources</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Featured Resources</h2>
-
-        <div class="resources">
-            <div class="card">
-                <h3>Health Articles</h3>
-                <p>
-                    Read expert-reviewed articles covering diseases,
-                    treatments, nutrition, fitness, and healthy living.
-                </p>
-                <a href="#" class="btn">View Articles</a>
-            </div>
-
-            <div class="card">
-                <h3>Medical Journals</h3>
-                <p>
-                    Access scholarly publications and research findings
-                    from healthcare professionals and institutions.
-                </p>
-                <a href="#" class="btn">Browse Journals</a>
-            </div>
-
-            <div class="card">
-                <h3>Patient Education</h3>
-                <p>
-                    Find easy-to-understand guides, brochures, and health
-                    information designed for patients and families.
-                </p>
-                <a href="#" class="btn">Learn More</a>
-            </div>
-
-            <div class="card">
-                <h3>Public Health Reports</h3>
-                <p>
-                    Explore reports and statistics on community health,
-                    disease surveillance, and healthcare services.
-                </p>
-                <a href="#" class="btn">View Reports</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Health Topics</h2>
-        <ul>
-            <li>Maternal and Child Health</li>
-            <li>Communicable Diseases</li>
-            <li>Non-Communicable Diseases</li>
-            <li>Mental Health and Well-being</li>
-            <li>Nutrition and Healthy Living</li>
-            <li>Vaccination and Immunization</li>
-            <li>Environmental and Public Health</li>
-        </ul>
-    </div>
-
+<h2>Find Your Way</h2>
+<section class="grid">
+<div class="card">
+<img src="Mosquito.jpg">
+<h3>Communicable Disease</h3>
 </div>
+<div class="card">
+<img src="ebv.jpg">
+<h3>Ebola Virus Disease (EVD)</h3>
+</div>
+<div class="card">
+<img src="hippo.jpg">
+<h3>Environmental Health</h3>
+</div>
+<div class="card">
+<img src="vaccine.jpg">
+<h3>Ministry of Health Projects</h3>
+</div>
+</section>
 
+
+<section class="grid">
+<img src="abc.png" alt="abc" align="left" width="300">
+<h3>Weekly epidemiological Bulletin week 49:
+30th Nov- 6th 2020</h3>
+<p>We are pleased to share our 49th weekly epidemiological bulletin for the year 2020. This epidemiological bulletin serves to inform all stakeholders at district, national, and global levels on disease trends, public health surveillance and interventions undertaken in detecting, preventing and responding to public health events in Uganda on a weekly basis.A total of 17 AFP cases was reported during week 49  Amudat 1, Buteleja 1, Kaabong 1, Kagadi 1, Kalungu 1, Kassanda 1, Katakwi 1, Kazo 1, Koboko 1, Moroto 1, Mukono 1, Nabilatuk 1, Nakasese 2 and Ntungamo 3 . The Non-polio AFP rate is 1.76/100,000 children 0 - 14 years compared with 2.74/100,000 children 0 -14 years in 2019 The adequate samples collection rate is 91.86% compared with 90.42% in 2019  NPENT rate is 12.17% compared with NPENT rate of 15.27% in 2019  Two formally silent districts (Amudat and Kalungu) have joined the set of districts which have detected and investigated at least one AFP case in the year 2020 Silent districts; Agago, Amolatar, Alebtong, Busia, Jinja, Kitagwenda, Kamuli, Kyankwanzi, Madi Okollo, and Rubanda</p>
+</div>
+</section>
+<section class="partners">
+<h2>Development Partners</h2>
+<img src="WOH.png">
+<img src="USAID.png">
+<img src="world bank.png">
+<img src="URC.png">
+<img src="fbi.png">
+</section>
 <footer>
-<!-- Font Awesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<footer class="footer">
-
-    <div class="footer-container">
-
-        <!-- Column 1 -->
-        <div class="footer-col">
-            <img src="MOH coat.png" alt="MOH Logo" class="footer-logo">
-
-            <h3>Ministry of Health<br>Knowledge<br>Management Portal</h3>
-
-            <p>Republic of Uganda</p>
-
-            <br>
-
-            <p>Plot 6 Lourdel Rd, Nakasero</p>
-
-            <p>Toll Free: 0800-100-066,<br>
-            Office: +256 417 712260</p>
-
-            <p>P.O. Box 7272 Kampala Uganda</p>
-        </div>
-
-        <!-- Column 2 -->
-        <div class="footer-col">
-
-            <h2>Quick Links</h2>
-
-            <a href="#">About Us</a>
-            <a href="#">Categories</a>
-            <a href="#">Publications</a>
-            <a href="#">FAQ</a>
-            <a href="#">Login</a>
-
-        </div>
-
-        <!-- Column 3 -->
-        <div class="footer-col">
-
-            <h2>Information</h2>
-
-            <a href="#">Ministry Website</a>
-            <a href="#">Support Center</a>
-            <a href="#">Terms of Use</a>
-
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
-            </div>
-
-        </div>
-
-        <!-- Column 4 -->
-        <div class="footer-col">
-
-            <h2>Join our Mailing List</h2>
-
-            <p>Be notified about the most recent publications</p>
-
-            <label>Email <span>*</span></label>
-
-            <input type="email" placeholder="">
-
-            <small>The subscriber's email address.</small>
-
-            <button>Subscribe</button>
-
-        </div>
-
-    </div>
-
-    <div class="copyright">
-
-        © Copyright 2023 | Ministry of Health - Republic of Uganda | All Rights Reserved.
-
-    </div>
-
+<div class="footer">
+    <p>🏛️ Ministry of Health Uganda · Data &amp; E-Services Portal</p>
+    <p>📍 Plot 6 Lourdel Road, Wandegeya, Kampala, Uganda</p>
+    <p>📧 info@health.go.ug</p>
+    <p class="copy">&copy; 2026 Ministry of Health Uganda. All Rights Reserved.</p>
+</div>
 </footer>
-    <p>&copy; 2026 Health Information System | Health Library</p>
-</footer>
-
 </body>
 </html>
