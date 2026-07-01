@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Contact Us - Health Library</title>
+<style>
+*{
+box-sizing:border-box
+}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f6f8;
+color:#333
+}
+header{
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('uganda_flag.jpg');
+background-size:cover;
+background-position:center;
+color:white;
+padding:50px 20px;
+text-align:center;
+}
+nav{
+display:flex;
+justify-content:center;
+gap:25px;
+background:#b30000;
+padding:12px
+}
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+}
+.hero{
+background:linear-gradient(rgba(0,0,0,.45),
+rgba(0,0,0,.45)),url('library.jpg') c
+enter/cover;height:240px;display:flex;align-items:center;
+justify-content:center;
+color:black;
+font-size:2rem
+}
+.wrap{
+max-width:1100px;
+margin:auto;
+padding:30px
+}
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px
+}
+.card,.form{
+background:#fff;
+padding:22px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,.12)
+}
+.info p{
+margin:10px 0
+}
+input,textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:5px
+}
+button{
+background:#8b0000;
+color:#fff;
+border:0;
+padding:12px 20px;
+border-radius:5px;
+cursor:pointer
+}
+button:hover{
+background:#660000
+}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:18px;margin:25px 0
+}
+.small{
+background:#fff;
+padding:18px;
+border-left:5px solid #8b0000;
+border-radius:8px
+}
+.map{
+height:260px;background:#ddd;
+display:flex;align-items:center;
+justify-content:center;
+border-radius:10px
+}
+ 
+        .footer {
+            background: #990000;
+            color: white;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 30px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer .copy {
+            margin-top: 12px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+@media(max-width:768px){.grid{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header>
+<img src="MOH coat.png" alt="MOH coat" width="100" align="left">
+<h1>Ministry of Health Uganda - Contact Us</h1></header>
+<nav><a href="#">Home</a><a href="#">About</a><a href="#">Health Library</a><a href="#">Publications</a><a href="#">Contact Us</a></nav>
+<div class="hero"><b>Contact Us</b></div>
+<div class="wrap">
+<div class="cards">
+<div class="small"><h3>📍 Location</h3><p>Plot 6 Lourdel Road, Wandegeya, Kampala</p></div>
+<div class="small"><h3>☎ Phone</h3><p>+256 (Official Ministry Contact)</p></div>
+<div class="small"><h3>✉ Email</h3><p>info@health.go.ug</p></div>
+<div class="small"><h3>🕒 Office Hours</h3><p>Mon–Fri: 8:00 AM–5:00 PM</p></div>
+</div>
+<div class="grid">
+<div class="card info">
+<h2>Contact Information</h2>
+<p><b>Ministry of Health Uganda</b></p>
+<p>Plot 6 Lourdel Road, Wandegeya, Kampala</p>
+<p>P.O. Box 7272 Kampala</p>
+<p>Email: info@health.go.ug</p>
+<p>Website: www.health.go.ug</p>
+<div class="form">
+<h2>Send Us a Message</h2>
+<form onsubmit="event.preventDefault();alert('Message submitted successfully!');">
+<input placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input placeholder="Phone Number">
+<input placeholder="Subject" required>
+<textarea rows="6" placeholder="Your Message" required></textarea>
+<button>Send Message</button>
+</form>
+</div>
+<br>
+<div class="map">
+<img src="map.png" alt="map" width="1000" height="350">
+</div>
+</div></div>
+<footer>
+ <div class="footer">
+    <p>🏛️ Ministry of Health Uganda · Data &amp; E-Services Portal</p>
+    <p>📍 Plot 6 Lourdel Road, Wandegeya, Kampala, Uganda</p>
+    <p>📧 info@health.go.ug</p>
+    <p class="copy">&copy; 2026 Ministry of Health Uganda. All Rights Reserved.</p>
+</div>
+© 2026 Ministry of Health Uganda | Contact Us Page</footer>
+</body></html>

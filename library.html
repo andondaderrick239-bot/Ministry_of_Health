@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Health Library</title>
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f7fa
+}
+
+        header {
+            background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('library.jpg');
+background-size:cover;
+background-position:center
+}
+h1{
+text-align:center;
+color:white;
+}
+h2{
+text-align:center;
+color:black;
+}
+h3{
+text-align:right;
+color:black;
+}
+nav{
+display:flex;
+gap:20px;
+justify-content:center;
+background:#990000;
+padding:12px;
+align:right;
+}
+nav a{
+color:#fff;
+text-decoration:none;
+font-weight:bold
+}
+.hero{
+text-align:center;
+padding:40px 20px
+}
+input{
+width:min(700px,90%);
+padding:12px;border-radius:25px;
+border:1px solid #ccc
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+padding:30px
+}
+.card{
+background:#fff;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,.15);
+overflow:hidden
+}
+.card img{
+width:100%;
+height:180px;
+object-fit:cover
+}
+.card h3{
+padding:10px;
+color:#990000
+}
+.partners{
+text-align:center;
+padding:30px
+}
+.partners img{
+height:60px;
+margin:15px
+}
+.footer {
+            background: #990000;
+            color: white;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 30px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer .copy {
+            margin-top: 12px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+</style>
+</head>
+<body>
+<header>
+<nav>
+<a href="#">Home</a>
+<a href="#">About US</a>
+<a href="#">Ebola</a>
+<a href="#">Categories</a>
+<a href="#">Publications</a>
+<a href="#">FAQs</a>
+<a href="#">LOGIN</a>
+</nav>
+
+<img src="MOH coat.png" alt="MOH coat" width="100" align="left">
+<h1>Health Library</h1>
+<h1><p>Your Trusted Source for Health Information and Learning Resources</p></h1>
+<section class="hero">
+<input placeholder="Search publications, articles, keywords, etc.">
+
+</header>
+</section>
+
+<h2>Find Your Way</h2>
+<section class="grid">
+<div class="card">
+<img src="Mosquito.jpg">
+<h3>Communicable Disease</h3>
+</div>
+<div class="card">
+<img src="ebv.jpg">
+<h3>Ebola Virus Disease (EVD)</h3>
+</div>
+<div class="card">
+<img src="hippo.jpg">
+<h3>Environmental Health</h3>
+</div>
+<div class="card">
+<img src="vaccine.jpg">
+<h3>Ministry of Health Projects</h3>
+</div>
+</section>
+
+
+<section class="grid">
+<img src="abc.png" alt="abc" align="left" width="300">
+<h3>Weekly epidemiological Bulletin week 49:
+30th Nov- 6th 2020</h3>
+<p>We are pleased to share our 49th weekly epidemiological bulletin for the year 2020. This epidemiological bulletin serves to inform all stakeholders at district, national, and global levels on disease trends, public health surveillance and interventions undertaken in detecting, preventing and responding to public health events in Uganda on a weekly basis.A total of 17 AFP cases was reported during week 49  Amudat 1, Buteleja 1, Kaabong 1, Kagadi 1, Kalungu 1, Kassanda 1, Katakwi 1, Kazo 1, Koboko 1, Moroto 1, Mukono 1, Nabilatuk 1, Nakasese 2 and Ntungamo 3 . The Non-polio AFP rate is 1.76/100,000 children 0 - 14 years compared with 2.74/100,000 children 0 -14 years in 2019 The adequate samples collection rate is 91.86% compared with 90.42% in 2019  NPENT rate is 12.17% compared with NPENT rate of 15.27% in 2019  Two formally silent districts (Amudat and Kalungu) have joined the set of districts which have detected and investigated at least one AFP case in the year 2020 Silent districts; Agago, Amolatar, Alebtong, Busia, Jinja, Kitagwenda, Kamuli, Kyankwanzi, Madi Okollo, and Rubanda</p>
+</div>
+</section>
+<section class="partners">
+<h2>Development Partners</h2>
+<img src="WOH.png">
+<img src="USAID.png">
+<img src="world bank.png">
+<img src="URC.png">
+<img src="fbi.png">
+</section>
+<footer>
+<div class="footer">
+    <p>🏛️ Ministry of Health Uganda · Data &amp; E-Services Portal</p>
+    <p>📍 Plot 6 Lourdel Road, Wandegeya, Kampala, Uganda</p>
+    <p>📧 info@health.go.ug</p>
+    <p class="copy">&copy; 2026 Ministry of Health Uganda. All Rights Reserved.</p>
+</div>
+</footer>
+</body>
+</html>
