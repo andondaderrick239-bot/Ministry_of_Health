@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facility Registry</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<style>
+/* Remove default spacing */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f5f7fa;
+
+    color:#333;
+
+}
+header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px;
+
+background:white;
+
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+}
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+.logo img{
+
+width:80px;
+
+height:auto;
+
+}
+.title h1{
+
+font-size:28px;
+
+color:#003366;
+
+}
+.title h2{
+
+font-size:18px;
+
+}
+.title p{
+
+font-size:16px;
+
+color:#555;
+
+}
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:30px;
+
+}
+nav a{
+
+text-decoration:none;
+
+color:#003366;
+
+font-weight:bold;
+
+}
+nav a:hover{
+
+color:#0077cc;
+
+}
+.dropdown{
+
+position:relative;
+
+}
+.dropdown-content{
+
+display:none;
+
+position:absolute;
+
+background:white;
+
+min-width:220px;
+
+box-shadow:0 3px 10px rgba(0,0,0,.2);
+
+}
+.dropdown:hover .dropdown-content{
+
+display:block;
+
+}
+button{
+
+padding:10px 20px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:5px;
+
+font-weight:bold;
+
+}
+.buttons button:first-child{
+
+background:#005baa;
+
+color:white;
+
+}
+.buttons button:last-child{
+
+background:white;
+
+border:1px solid #005baa;
+
+color:#005baa;
+
+}
+.buttons button:last-child{
+
+background:white;
+
+border:1px solid #005baa;
+
+color:#005baa;
+
+}
+<section class="filters">
+
+<div class="filter-box">
+
+<label>Region</label>
+
+<select>
+
+<option>Central</option>
+
+</select>
+
+</div>
+
+</section>
+.filter-box{
+
+display:flex;
+
+flex-direction:column;
+
+}
+.filter-box label{
+
+font-weight:bold;
+
+margin-bottom:8px;
+
+color:#003366;
+
+}
+.filter-box input,
+
+.filter-box select{
+
+padding:12px;
+
+border:1px solid #ccc;
+
+border-radius:6px;
+
+font-size:15px;
+
+width:100%;
+
+}
+.filter-box input:focus,
+
+.filter-box select:focus{
+
+border:2px solid #005baa;
+
+outline:none;
+
+}
+.facility-table{
+
+background:white;
+
+margin:30px;
+
+padding:20px;
+
+border-radius:10px;
+
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+}
+.table-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+th{
+
+background:#005baa;
+
+color:white;
+
+padding:15px;
+
+text-align:left;
+
+}
+td{
+
+padding:15px;
+
+border-bottom:1px solid #ddd;
+
+}
+tr:hover{
+
+background:#f0f8ff;
+
+}
+td button{
+
+background:#005baa;
+
+color:white;
+
+padding:8px 18px;
+
+border:none;
+
+border-radius:5px;
+
+cursor:pointer;
+
+}
+td button:hover{
+
+background:#003366;
+
+}
+.pagination{
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+margin:30px;
+
+}
+.pagination button{
+
+padding:10px 15px;
+
+background:white;
+
+border:1px solid #ccc;
+
+border-radius:5px;
+
+cursor:pointer;
+
+}
+.pagination .active{
+
+background:#005baa;
+
+color:white;
+
+}
+.pagination button:hover{
+
+background:#005baa;
+
+color:white;
+
+}
+footer{
+
+background:#003366;
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+margin-top:40px;
+
+}
+</style>
+
+    <div class="logo">
+
+        <img src="MOH coat.png"
+             alt="MOH coat">
+
+        <div class="title">
+
+            <h2>Republic of Uganda</h2>
+
+            <p>Ministry of Health</p>
+
+            <h1>National Health Facility Registry</h1>
+
+        </div>
+
+    </div>
+
+        <div class="buttons">
+
+        <button>Create Account</button>
+
+        <button>Login</button>
+
+    </div>
+
+</header>
+<main>
+
+    <section class="facility-header">
+
+        <h1>Uganda Master Facility List</h1>
+
+        <p>
+            Browse and search all active registered health
+            facilities in the country.
+        </p>
+
+        <div class="actions">
+
+            <button class="clear-btn">
+                Clear Filters
+            </button>
+
+            <button class="excel-btn">
+                Export to Excel
+            </button>
+
+        </div>
+
+    </section>
+<section class="filters">
+
+    <div class="filter-box">
+
+        <label>Search Facility</label>
+
+        <input
+        type="text"
+        placeholder="Enter facility name or NHFR ID">
+
+    </div>
+
+    <div class="filter-box">
+
+        <label>Region</label>
+
+        <select>
+
+            <option>All Regions</option>
+
+            <option>Central</option>
+
+            <option>Eastern</option>
+
+            <option>Northern</option>
+
+            <option>Western</option>
+
+        </select>
+
+    </div>
+
+    <div class="filter-box">
+
+        <label>District</label>
+
+        <select>
+
+            <option>Select District</option>
+
+        </select>
+
+    </div>
+
+    <div class="filter-box">
+
+        <label>Municipality</label>
+
+        <select>
+
+            <option>Select Municipality</option>
+
+        </select>
+
+    </div>
+
+    <div class="filter-box">
+
+        <label>Subcounty</label>
+
+        <select>
+
+            <option>Select Subcounty</option>
+
+        </select>
+
+    </div>
+
+    <div class="filter-box">
+
+        <label>Level</label>
+
+        <select>
+
+            <option>All Levels</option>
+
+            <option>HC II</option>
+
+            <option>HC III</option>
+
+            <option>HC IV</option>
+
+            <option>Hospital</option>
+
+        </select>
+
+    </div><section class="facility-table">
+
+    <div class="table-header">
+
+        <h2>
+            Health Facilities (6,791 Records)
+        </h2>
+
+        <p>
+            Showing 1 to 20 of 6,791 records
+        </p>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Identifier</th>
+
+                <th>Name</th>
+
+                <th>Level</th>
+
+                <th>Ownership</th>
+
+                <th>Authority</th>
+
+                <th>Subcounty</th>
+
+                <th>District</th>
+
+                <th>Region</th>
+
+                <th>View</th>
+
+            </tr>
+
+        </thead>
+<tbody>
+
+<tr>
+
+<td>2870916</td>
+
+<td>Alop Health Centre II</td>
+
+<td>HC II</td>
+
+<td>GOV</td>
+
+<td>Local Government</td>
+
+<td>Adilang Subcounty</td>
+
+<td>Agago District</td>
+
+<td>Acholi</td>
+
+<td>
+
+<button>
+
+View
+
+</button>
+
+</td>
+
+</tr>
+<tr>
+
+<td>3776549</td>
+
+<td>Adilang Health Centre III</td>
+
+<td>HC III</td>
+
+<td>GOV</td>
+
+<td>Local Government</td>
+
+<td>Adilang Town Council</td>
+
+<td>Agago District</td>
+
+<td>Acholi</td>
+
+<td>
+
+<button>
+
+View
+
+</button>
+
+</td>
+
+</tr>
+<tr>
+
+<td>4416503</td>
+
+<td>David Fagerlee's Medical Centre</td>
+
+<td>HC II</td>
+
+<td>PNFP</td>
+
+<td>UCMB</td>
+
+<td>Adilang Town Council</td>
+
+<td>Agago District</td>
+
+<td>Acholi</td>
+
+<td>
+
+<button>
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+<section class="pagination">
+
+<button>
+
+Previous
+
+</button>
+
+<button class="active">
+
+1
+
+</button>
+
+<button>
+
+2
+
+</button>
+
+<button>
+
+3
+
+</button>
+
+<button>
+
+4
+
+</button>
+
+<span>
+
+...
+
+</span>
+
+<button>
+
+340
+
+</button>
+
+<button>
+
+Next
+
+</button>
+
+</section>
+<section class="filters">
+
+<div class="filter-box">
+
+<label>Region</label>
+
+<select>
+
+<option>Central</option>
+
+</select>
+
+</div>
+
+<footer>
+
+<p>
+
+© 2025 Ministry of Health Uganda.
+
+All Rights Reserved.
+
+</p>
+</footer>
+
+
+</section>
+</html>
+</head>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IEC MATERIAL · Uganda</title>
+    <style>
+     
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fb;
+            color: #222;
+            padding: 0 10px;
+        }
+
+     .top-bar {
+            background: #990000;
+            color: white;
+            padding: 8px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .top-bar .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .top-bar .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .top-bar .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .top-bar .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('uganda_flag.jpg');
+background-size:cover;
+background-position:center;
+
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+
+        .filter-bar {
+            background: white;
+            max-width: 1000px;
+            margin: 0 auto 25px auto;
+            padding: 18px 20px;
+            border-radius: 14px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            gap: 12px 18px;
+        }
+
+        .filter-group {
+            flex: 1 1 140px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .filter-group label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .filter-group input,
+        .filter-group select {
+            padding: 9px 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            background: #fafcff;
+        }
+
+        .filter-btn {
+            background: #990000;
+            color: white;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: auto;
+            height: 44px;
+        }
+
+        .filter-btn:hover {
+            background: #770000;
+        }
+
+
+        .main-section {
+            max-width: 1100px;
+            margin: 0 auto 20px;
+        }
+
+        /* section titles */
+        .section-title {
+            font-size: 26px;
+            color: #990000;
+            border-left: 6px solid #990000;
+            padding-left: 14px;
+            margin: 30px 0 18px 0;
+        }
+
+
+        .table-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            margin-bottom: 30px;
+        }
+
+        .pdf-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        .pdf-table thead {
+            background: #990000;
+            color: white;
+        }
+
+        .pdf-table th {
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .pdf-table td {
+            padding: 13px 18px;
+            border-bottom: 1px solid #e6ecf2;
+        }
+
+        .pdf-table tbody tr:hover {
+            background: #f8faff;
+        }
+
+        .pdf-table .col-no {
+            text-align: center;
+            width: 60px;
+            color: #555;
+        }
+
+        .pdf-table .col-download {
+            text-align: right;
+        }
+
+        /* download button */
+        .btn-download {
+            background: #990000;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .btn-download:hover {
+            background: #660000;
+        }
+
+
+        .news-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin: 20px 0 10px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px 20px 28px;
+            width: 240px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0e7ef;
+        }
+
+        .news-card img {
+            width: 70px;
+            margin-bottom: 10px;
+        }
+
+        .news-card h3 {
+            font-size: 17px;
+            margin: 10px 0 16px;
+            color: #1e2a3a;
+            line-height: 1.4;
+        }
+
+        .news-card .sub {
+            font-weight: normal;
+            color: #555;
+        }
+
+        .news-card .btn-download {
+            background: #1e2a3a;
+        }
+
+        .news-card .btn-download:hover {
+            background: #0f1722;
+        }
+
+       
+        .footer {
+            background: #990000;
+            color: white;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 30px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+
+        .footer .copy {
+            margin-top: 12px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+    
+        @media (max-width: 700px) {
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .filter-btn {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            /* make table stack on small screens */
+            .pdf-table thead {
+                display: none;
+            }
+
+            .pdf-table,
+            .pdf-table tbody,
+            .pdf-table tr,
+            .pdf-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .pdf-table tr {
+                margin-bottom: 16px;
+                border: 1px solid #e0e7ef;
+                border-radius: 14px;
+                padding: 8px 0;
+                background: white;
+            }
+
+            .pdf-table td {
+                border: none;
+                padding: 8px 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px dashed #eef2f7;
+            }
+
+            .pdf-table td:last-child {
+                border-bottom: none;
+            }
+
+            .pdf-table td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                color: #222;
+                margin-right: 15px;
+            }
+
+            .pdf-table .col-download {
+                text-align: right;
+                justify-content: flex-end;
+            }
+
+            .pdf-table .col-no {
+                text-align: left;
+            }
+
+            .news-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .news-card {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+  .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 15px 25px;
+            padding: 5px 0 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 4px 2px;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
+        /* Header content */
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 15px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .header-content img {
+            width: 90px;
+            height: auto;
+        }
+
+        .header-text {
+            text-align: center;
+        }
+
+        .header-text h1 {
+            font-size: 32px;
+            margin-bottom: 4px;
+        }
+
+        .header-text p {
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+        <div class="contact-info">
+            <span>📞 Talk to us: <a href="tel:0800100066">0800-100-066</a></span>
+            <span>✉️ Write to us: <a href="mailto:helpdesk.health.go.ug">helpdesk.health.go.ug</a></span>
+        </div>
+        <div>
+            <!-- empty for spacing, or you can add something here -->
+        </div>
+    </div>
+
+<div class="header">
+
+<img src="MOH coat.png" alt="MOH coat" width="100" align="left">
+
+    <h1>📄 IEC Materials</h1>
+    <p>Information, Education, and Communication · Uganda</p>
+</div>
+
+<div class="filter-bar">
+    <div class="filter-group">
+        <label for="keyword">🔍 Keyword</label>
+        <input type="text" id="keyword" placeholder="Search title..." />
+    </div>
+    <div class="filter-group">
+        <label for="publishDate">📅 Publish Date</label>
+        <select id="publishDate">
+            <option value="">All years</option>
+            <option>2026</option>
+            <option>2025</option>
+            <option>2024</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <label for="order">🔽 Order</label>
+        <select id="order">
+            <option>Descending</option>
+            <option>Ascending</option>
+        </select>
+    </div>
+    <button class="filter-btn">Apply Filter</button>
+</div>
+
+
+<div class="main-section">
+
+       <div class="section-title"> Ebola · IEC Materials</div>
+    <div class="table-card">
+        <table class="pdf-table">
+            <thead>
+                <tr>
+                    <th class="col-no">No.</th>
+                    <th>Document Title</th>
+                    <th class="col-download">Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-no" data-label="No.">1</td>
+                    <td data-label="Document Title">Ebola Child Friendly Poster</td>
+                    <td class="col-download" data-label="Download">
+                        <a href="Ebola Child Friendly Poster .pdf" download class="btn-download">📄 Download PDF</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-no" data-label="No.">2</td>
+                    <td data-label="Document Title">EBOLA VIRUS DISEASE SOPs</td>
+                    <td class="col-download" data-label="Download">
+                        <a href="EBOLA VIRUS DISEASE SOPs May 2026 Revised.pdf" download class="btn-download">📄 Download PDF</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-no" data-label="No.">3</td>
+                    <td data-label="Document Title">Ebola poster (English)</td>
+                    <td class="col-download" data-label="Download">
+                        <a href="English - Ebola poster 1.pdf" download class="btn-download">📄 Download PDF</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-no" data-label="No.">4</td>
+                    <td data-label="Document Title">SOPS FOR BARS AND NIGHT CLUBS</td>
+                    <td class="col-download" data-label="Download">
+                        <a href="SOPS FOR BARS AND NIGHT CLUBS.pdf" download class="btn-download">📄 Download PDF</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-no" data-label="No.">5</td>
+                    <td data-label="Document Title">SOPS FOR HOTELS AND RESTAURANTS</td>
+                    <td class="col-download" data-label="Download">
+                        <a href="SOPS FOR HOTELS AND RESTAURANTS .pdf" download class="btn-download">📄 Download PDF</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <    <div class="section-title"> Malaria · IEC Materials</div>
+    <div class="table-card">
+        <table class="pdf-table">
+            <thead>
+                <tr>
+                    <th class="col-no">No.</th>
+                    <th>Document Title</th>
+                    <th class="col-download">Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-no" data-label="No.">1</td>
+                    <td data-label="Document Title">World-Malaria-Day</td>
+                    <td class="col-download" data-label="Download">
+                        <a href="World-Malaria-Day-2025-revised.pdf" download class="btn-download">📄 Download PDF</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-no" data-label="No.">2</td>
+                    <td data-label="Document Title">Malaria Vaccine FAQs</td>
+                    <td class="col-download" data-label="Download">
+                        <a href="Malaria Vaccine FAQs 2025.pdf" download class="btn-download">📄 Download PDF</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-no" data-label="No.">3</td>
+                    <td data-label="Document Title">Under the Net (Factsheet)</td>
+                    <td class="col-download" data-label="Download">
+                        <a href="Factsheet Under the Net 2026 .pdf" download class="btn-download">📄 Download PDF</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-no" data-label="No.">4</td>
+                    <td data-label="Document Title">MALARIA VACCINE (brochure)</td>
+                    <td class="col-download" data-label="Download">
+                        <a href="MALARIA VACCINE.pdf" download class="btn-download">📄 Download PDF</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="section-title" style="margin-top:35px;">📰 Newsletters &amp; Reports</div>
+    <div class="news-grid">
+        <div class="news-card">
+            <img src="pdf.png" alt="PDF" />
+            <h3>Ministry of Health Quarterly <br /> <span class="sub">1st October 2025</span></h3>
+            <a href="Ministry of Health Quarterly Newsletter 1st October 2025.pdf" download class="btn-download">📄 Download PDF</a>
+        </div>
+
+        <div class="news-card">
+            <img src="pdf.png" alt="PDF" />
+            <h3>MoH Newsletter 2024 <br /> <span class="sub">improved version</span></h3>
+            <a href="MoH Newsletter 2024 improved version.pdf" download class="btn-download">📄 Download PDF</a>
+        </div>
+    </div>
+
+</div> ->
+
+
+<div class="footer">
+    <p>🏛️ Ministry of Health Uganda · Data &amp; E-Services Portal</p>
+    <p>📍 Plot 6 Lourdel Road, Wandegeya, Kampala, Uganda</p>
+    <p>📧 info@health.go.ug</p>
+    <p class="copy">&copy; 2026 Ministry of Health Uganda. All Rights Reserved.</p>
+</div>
+
+</body>
+</html>
