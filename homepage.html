@@ -13,42 +13,27 @@
         
         <nav>
             <ul class="nav-links">
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="news-events.html">News & Events</a></li>
-                <li><a href="data-eservices.html">Data & E-Services</a></li>
-                <li><a href="opportunities.html">Opportunities</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">News & Events</a></li>
+                <li><a href="#">Data & E-Services</a></li>
+                <li><a href="#">Opportunities</a></li>
+                <li><a href="#">Contact Us</a></li>
                 <li class="search-button"><button type="button">Search</button></li>
-                                    <a href="https://google.com">Visit Google</a>      
-            </ul>
+                                            </ul>
         </nav>
         <h1>Ministry of Health</h1>
     </header>
-    <div class="header-banner">
-        <div class="slider" aria-hidden="false">
-            <img src="image_11.avif" alt="Ministry of Health banner 1" class="active" />
-            <img src="image_12.jpg" alt="Ministry of Health banner 2" />
-            <img src="image_9.jpg" alt="Ministry of Health banner 3" />
-        </div>
-    </div>
     <section class="contact">
-        <div class="contact-container">
-            <div class="contact-text">
-                <p class="contact-info">
-                    Call the Ministry of Health toll-free line on:
-                </p>
-                <p class="contact-number">
-                    0800-100-066, send an Alert SMS to 6767,
-                </p>
-                <p class="contact-information">
-                    or U-Report to 8500 for help and guidance.
-                </p>
-            </div>
-            <div class="contact-image">
-                <img src="image_6.jpg" alt="Ministry of Health contact" />
-            </div>
-        </div>
+        <p class="contact-info">
+            Call the Ministry of Health toll-free line on:
+        </p>
+        <p class="contact-number">
+            0800-100-066, send an Alert SMS to 6767, 
+        </p>
+        <p class="contact-information">
+            or U-Report to 8500 for help and guidance.
+        </p>
     </section>
     <section class="events">
         <div class="event-card2">
@@ -80,10 +65,6 @@
         </div>
     </section>
     <section class="ministry-information">
-        <div class="ministry-image">
-            <img src="image_7.jpg" alt="Ministry of Health" />
-        </div>
-        <h8> About the Ministry of Health </h8>
         <p class="ministry-info">
             The Ministry of Health is a government body set up with the mandate of stewardship and leadership of the health sector. The Ministry of Health is responsible for policy review and development, supervision of health sector activities, formulation and dialogue with health development partners, strategic planning, setting standards and quality assurance, resource mobilization, advising other Ministries, departments and agencies on health-related matters, and ensuring quality, health equity, and fairness in contribution towards the cost of health care.
         </p>
@@ -192,10 +173,6 @@
     <footer>
         <a href="#" title="Back to Top" class="scroll-to-top"><i class="dsvy-base-icon-up-open-big"></i></a>
 
-        <div class="footer-image">
-            <img src="image_5.jpg" alt="Ministry of Health" />
-        </div>
-
         <h9> OUR MISSION </h9> 
     
                <p>
@@ -203,7 +180,7 @@
         </p> 
     
         <section class="newsletter-section">
-              <div class="newsletter-header">
+  <div class="newsletter-header">
     <h2>Newsletter</h2>
   </div>
   
@@ -264,7 +241,7 @@
     </li>
   </ul>
 </section>
-        <h7>GET IN TOUCH</h7>
+        <h8 GET IN TOUCH></h>
         <address>
             Plot 6, Lourdel Road, Nakasero<br>
   P.O. Box 7272<br>
@@ -288,34 +265,5 @@
                         <p class="copyright">&copy; 2026 Ministry of Health. All rights reserved.</p>
 
     </footer>
-    <script>
-    (function(){
-        const imgs = document.querySelectorAll('.header-banner .slider img');
-        if(!imgs || imgs.length < 2) return;
-        let current = 0;
-        const total = imgs.length;
-        // initialize
-        imgs.forEach((img, i) => {
-            img.style.opacity = i === 0 ? '1' : '0';
-            img.style.transform = i === 0 ? 'translateX(0)' : 'translateX(8%)';
-        });
-
-        function show(next){
-            const prevImg = imgs[current];
-            const nextImg = imgs[next];
-            if(prevImg === nextImg) return;
-            // trigger transitions
-            prevImg.style.opacity = '0';
-            prevImg.style.transform = 'translateX(-8%)';
-            nextImg.style.opacity = '1';
-            nextImg.style.transform = 'translateX(0)';
-            current = next;
-        }
-
-        setInterval(()=>{
-            show((current + 1) % total);
-        }, 3800);
-    })();
-    </script>
 </body>
 </html>
