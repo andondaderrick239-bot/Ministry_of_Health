@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            color: #222;
+            padding: 10px;
+        }
+
+      
+        .header {
+            background: #990000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 16px;
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+        }
+
+     
+        .search-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .search-box input:focus {
+            border-color: #990000;
+            outline: none;
+        }
+
+     
+        .pdf-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pdf-item {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pdf-item:hover {
+            background: #fafafa;
+        }
+
+        .pdf-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .pdf-icon {
+            font-size: 32px;
+        }
+
+        .pdf-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .pdf-title small {
+            font-weight: normal;
+            color: #666;
+            font-size: 13px;
+            display: block;
+        }
+
+        .pdf-btn {
+            background: #990000;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .pdf-btn:hover {
+            background: #660000;
+        }
+        .footer {
+            background: #990000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .footer p {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+
+        .footer .copy {
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+      
+        @media (max-width: 600px) {
+            .pdf-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .pdf-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+ 
+    <div class="header">
+        <h1>📄 Reports</h1>
+        <p>Ministry of Health - Uganda > Reports</p>
+    </div>
+
+  
+    <div class="filter-bar">
+    <div class="filter-group">
+        <label for="keyword">🔍 Keyword</label>
+        <input type="text" id="keyword" placeholder="Search title..." />
+    </div>
+    <div class="filter-group">
+        <label for="publishDate">📅 Publish Date</label>
+        <select id="publishDate">
+            <option value="">All years</option>
+            <option>2026</option>
+            <option>2025</option>
+            <option>2024</option>
+        </select>
+    </div>
+    <div class="filter-group">
+        <label for="order">🔽 Order</label>
+        <select id="order">
+            <option>Descending</option>
+            <option>Ascending</option>
+        </select>
+    </div>
+    <button class="filter-btn">Apply Filter</button>
+</div>
+
+
+        <div class="pdf-list" id="pdfList">
+
+        <!-- PDF 1 -->
+        <div class="pdf-item" data-title="AHSP Report FY 2024/25 FINAL">
+            <div class="pdf-info">
+                <span class="pdf-icon">📄</span>
+                <div class="pdf-title">
+                    AHSP Report FY 2024/25 FINAL
+                    <small>Annual Health Sub-Programme Performance Report</small>
+                </div>
+            </div>
+            <a href="AHSP Report FY2024_25 FINAL.pdf" download class="pdf-btn">⬇ Download PDF</a>
+        </div>
+
+        <!-- PDF 2 -->
+        <div class="pdf-item" data-title="NTLP Uganda Annual Report 2023-2024">
+            <div class="pdf-info">
+                <span class="pdf-icon">📄</span>
+                <div class="pdf-title">
+                    NTLP Uganda Annual Report 2023-2024
+                    <small>National TB and Leprosy Programme</small>
+                </div>
+            </div>
+            <a href="NTLP Uganda Annual Report 2023-2024.pdf" download class="pdf-btn">⬇ Download PDF</a>
+        </div>
+
+        <!-- PDF 3 -->
+        <div class="pdf-item" data-title="TB-Leprosy Strategy 2025/26 - 2029/30">
+            <div class="pdf-info">
+                <span class="pdf-icon">📄</span>
+                <div class="pdf-title">
+                    TB-Leprosy Strategy 2025/26 - 2029/30
+                    <small>National Tuberculosis and Leprosy Strategy</small>
+                </div>
+            </div>
+            <a href="TB-Leprosy-Strategy_K3-Electronic.pdf" download class="pdf-btn">⬇ Download PDF</a>
+        </div>
+
+    </div>
+
+    >
+    <div class="footer">
+        <p>🏛️ Ministry of Health Uganda · Data &amp; E-Services Portal</p>
+        <p>📍 Plot 6 Lourdel Road, Wandegeya, Kampala, Uganda</p>
+        <p>📧 info@health.go.ug</p>
+        <p class="copy">&copy; 2026 Ministry of Health Uganda. All Rights Reserved.</p>
+    </div>
+
+   
+</body>
+</html>
